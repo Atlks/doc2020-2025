@@ -1,0 +1,6 @@
+Atiti word similer english choose method
+
+Taglog  google trans,,,
+Set  english to chinese,,,,then choose the same and ver similar word first...
+
+Then tagl,to english ,,choose similar word...

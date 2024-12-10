@@ -1,0 +1,8 @@
+Atitit 事务回滚过程
+
+
+PostgreSQL的主要优势在于：
+1. PostgreSQL没有回滚段，而oracle与innodb有回滚段，oracle与Innodb都有回滚段。对于oracle与Innodb来说，回滚段是非常重要的，回滚段损坏，会导致数据丢失，甚至数据库无法启动的严重问题。另由于PostgreSQL没有回滚段，旧数据都是记录在原先的文件中，所以当数据库异常crash后，恢复时，不会象oracle与Innodb数据库那样进行那么复杂的恢复，因为oracle与Innodb恢复时同步需要redo和undo。所以PostgreSQL数据库在出现异常crash后，数据库起不来的几率要比oracle和mysql小一些。
+2. 由于旧的数据是直接记录在数据文件中，而不是回滚段中，所以不会象oracle那样经常报ora-01555错误。
+3. 回滚可以很快完成，因为回滚并不删除数据，而oracle与Innodb，回滚时很复杂，在事务回滚时必须清理该事务所进行的修改，插入的记录要删除，更新的记录要更新回来(见row_undo函数)，同时回滚的过程也会再次产生大量的redo日志。
+4. WAL日志要比oracle和Innodb简单，对于oracle不仅需要记录数据文件的变化，还要记录回滚段的变化。

@@ -1,0 +1,57 @@
+Atitit 提升开发效率法 fx t35
+Atitit 提升开发效率法---开发方法架构简化法.docx
+
+
+主要几个层次上简化开发
+
+，开发体系方法使用简单方法
+开发语言与接口开发上
+，技术选型使用简单框架模式
+，测试使用简单模式，
+部署使用简单
+扩展性 性能 稳定性方面的简化机制
+最起码三种模式，选择最简单的方法
+
+开发体系方法的改进
+简化的理念 。无脑原则
+提升可读性
+简化层次，双层法
+简化项目依赖，减少层次。。。
+专人总结，撰文总结简化体系
+轻量中型中型三选一简化法
+层次简化
+类库框架简化
+分为 最简单 轻量级框架 重型框架，中型 
+Pgsql mssql oracle
+Mq activemq  kafka
+Msa nginx dubbo zuul sprbld
+Jpa mybatis hb
+Timer dbtimer crontab 分布式定时
+语言更有表现力dsl
+业务脚本+dsl sql
+免编译热部署
+面向过程vs oo。。同步vs 异步
+ 动态类型  map obj等
+并发模式 多进程 vs 多线程模式
+热部署 免部署
+参数化通用接口
+简化的设计模式
+简化调用链，缩短层次和路径 扁平化
+技术选型使用简单框架模式
+语言php脚本看看适当引用
+Pgsql+mongodb取代mysql。。支持持join和json索引
+
+大力减少class
+避免俄罗斯套娃模式
+
+测试服务器使用win
+部署适当使用同步法
+War打包法
+Resin热部署法
+性能负载均衡的简化
+Nginx，不使用微服务
+数据库业务用户分库，读写分离，分区。。
+Cache简化，优先mysqlcache，其次mybatiscache
+存入redis，sql为key
+
+

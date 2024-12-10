@@ -1,0 +1,45 @@
+说一说你知道的springboot-starter?
+Spring Boot2.0的默认web服务器是哪个？
+Spring Boot2.0的默认Thymeleaf是哪个版本？
+yml配置文件健值对:之前面必须有一个空格对吗？
+Thymeleaf如何访问pojo中的属性？
+Thymeleaf如何访问map中的数据？
+入口类的作用是什么？
+SpringApplication.run(xxx.class,args)的返回值是什么？
+@Configuration的作用是什么？如何使用？
+@Bean的作用是什么？如何使用？
+@SpringBootApplication的作用是什么？如何使用？
+@ComponentScan的作用是什么？如何使用？
+@MapperScan()的作用是什么？
+@ServletComponentScan的作用是什么？
+@PropertySource的作用是什么？
+@ImportResource的作用是什么？
+@RestController的作用是什么？
+工程的pom.xml中spring-boot-starter-parent的作用是什么？
+工程的spring-boot-starter-web的作用是什么？
+工程的tomcat-embed-jasper的作用是什么？
+工程spring-boot-maven-plugin的作用是什么？
+springboot工程的配置文件名称是什么？
+默认的静态资源的路径是什么？
+默认的模板文件的路径是什么？
+通过哪一个key 来改变tomcat默认的启动端口号？
+说一下你知道的springboot的约定配置？
+springboot的启动banner图标可以修改吗？
+什么是自动配置？ 
+说一下springboot的自动配置原理？
+如何排除默认提供的依赖使用自己的依赖？
+如何解决springboot工程war包无法在独立tomcat运行的问题？
+说一说servlet的URL匹配优先级？
+说一说filter初始化顺序？
+拦截器可以拦截servlet吗？
+过滤器中chain.doFilter()的作用？
+监听器监听的对象有哪些？
+接口中可以有实现了的方法对吗？
+拦截器不需要在web.xml中配置对吗？
+如何对springboot项目做单元测试？
+做单元测试有哪些注意事项？
+如何在application.properties中设置日志？
+springboot项目中默认的端口、URL规则、虚拟路径分别是什么？
+springboot项目中如何启动事务支持？
+springboot默认支持的模板有哪些？你使用过哪些？在这些模板中如何展示循环数据？
+说一说使用springboot做开发的一般步骤？

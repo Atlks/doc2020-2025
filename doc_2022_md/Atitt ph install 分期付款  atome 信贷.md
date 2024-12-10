@@ -1,0 +1,9 @@
+Atitt ph install 分期付款  atome 信贷
+
+Zalora最近与Buy now Pay Later（BNPL）平台Atome建立了区域合作伙伴关系
+
+2022年3月13日 — 数字旅游平台Agoda（安可达）正在与BNPL公司Atome合作，为菲律宾增加更灵活的支付选择， ...
+
+ 随着休闲旅游的回归，Atome于5月10日宣布与国泰航空建立合作伙伴关系。“'先预订后付款'功能提供了...
+
+Atome与软银支持的旅游科技公司Klook合作...https://technode.global › 首页 2 2021年10月7日 — 总部位于香港的旅游和休闲预订平台Klook和新加坡的购买即付（BNPL）公司Atome宣布...

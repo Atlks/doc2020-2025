@@ -1,0 +1,6 @@
+Atitit mybatis 全注解 模式获取sessinfactory
+
+
+如果采用SqlSessionFactoryBean的形式配置拦截器不起作用，需要在SqlSessionFactoryBean设置添加即可，如下红框框
+
+

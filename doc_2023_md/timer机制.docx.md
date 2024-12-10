@@ -1,0 +1,17 @@
+timer机制
+
+
+
+4、运行机制
+setTimeout和setInterval的运行机制是，将指定的代码移出本次执行，等到下一轮Event Loop时，再检查是否到了指定时间。如果到了，就执行对应的代码；如果不到，就等到再下一轮Event Loop时重新判断。这意味着，setTimeout指定的代码，必须等到本次执行的所有代码都执行完，才会执行。
+
+
+二者的区别
+线程角度
+Timer是单线程模式，如果某个TimerTask任务的执行时间比较久，会影响到其他任务的调度执行。
+ScheduledThreadPoolExecutor是多线程模式，并且重用线程池，某个ScheduledFutureTask任务执行的时间比较久，不会影响到其他任务的调度执行。
+系统时间敏感度
+Timer调度是基于操作系统的绝对时间的，对操作系统的时间敏感，一旦操作系统的时间改变，则Timer的调度不再精确。
+ScheduledThreadPoolExecutor调度是基于相对时间的，不受操作系统时间改变的影响。
+
+

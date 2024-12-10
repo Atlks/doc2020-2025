@@ -1,0 +1,7 @@
+Atitit 时间戳模块  Java获取当前时间戳/时间戳转换
+时间戳精度有两个概念：1是精确到秒，2是精确到毫秒
+
+要操作时间戳和时间戳转换为时间一般对应的对象就是Date，而Date各种转换离不开SimpleDateFormat；
+如果是要获取时间指定的年月日时，一般对应的是LocalDate，而LocalDate各种转换离不开DateFormatter；
+
+

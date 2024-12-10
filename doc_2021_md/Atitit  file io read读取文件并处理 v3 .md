@@ -1,0 +1,18 @@
+Atitit 读取文件并处理
+Php读取文件行到数组 循环行
+
+3. 以二进制读取 fread取代fgets
+      同样需要打开文件连接 fopen    
+　　特别注意：fread()虽然可以通过第二个参数来指定读取文件的长度，但最长只能读取8192个字节(8kb)，
+                    如果文件长度超过8k则需要循环读取
+4.将整个文件读入到一个字符串的方法 file_get_contents()
+      详细可见：PHP的file_get_contents()方法，将整个文件读入字符串中
+5.将整个文件读入到一个数组中返回 file()  
+　　
+6. 非线性文件处理 fseek
+         以上函数只允许顺序读取文件，当需要来回跳转到文件的不同部分。这时就得用 fseek 。
+
+Big file read by line
+
+Ref
+Atitit io读取文件法

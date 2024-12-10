@@ -1,0 +1,3 @@
+lpto-shnk
+ASUS TUF Gaming F17 FX707ZU4_FX707ZU4
+

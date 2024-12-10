@@ -1,0 +1,37 @@
+aTitit table doc gene  get table info from sql 表结构文档
+select table_name,table_comment from information_schema.TABLES where table_schema='dev_kok_sport'
+
+
+basketball_event_t	篮球赛事表
+basketball_match_t	篮球比赛信息表
+basketball_odds_t	篮球盘口指数表
+basketball_player_t	篮球比赛阵容表 
+basketball_score_t	篮球比赛得分表
+basketball_stage_t	篮球比赛阶段表
+basketball_stats_t	篮球比赛统计表
+basketball_team_player_t	篮球球员表
+basketball_team_t	篮球球队表
+basketball_tlive_t	篮球比赛文字直播表
+football_distribution_t	足球进球分布表
+football_environment_t	足球比赛环境表
+football_event_t	足球赛事表
+football_formation_t	足球比赛阵型表
+football_incident_t	比赛发生事件表
+football_injury_t	足球比赛伤停情况表
+football_league_score_t	足球联赛积分表
+football_match_t	足球比赛表
+football_odds_t	足球盘口指数表
+football_player_incident_t	足球比赛球员事件表
+football_score_t	足球比赛得分表
+football_stage_t	足球比赛阶段表
+football_stats_t	足球比赛统计表
+football_team_player_t	足球球队球员表
+football_team_t	足球球队表
+football_tlive_t	足球比赛文字直播表
+kok_match_stream_t	比赛直播数据源表
+kok_match_t	比赛信息基础表
+match_season_t	赛季信息表
+match_stream_t	比赛视频源表
+sys_area_t	区域表
+sys_country_t	国家表
+ 

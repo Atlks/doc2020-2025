@@ -1,0 +1,22 @@
+Atitit insert delayed mysql8
+
+
+
+
+由于您撰写的文章多于阅读的文章，因此我建议以下内容
+体面的InnoDB调整将是关键
+缓冲池（由innodb_buffer_pool_size调整大小）
+由于InnoDB不支持INSERT DELAYED，因此使用大型InnoDB缓冲池是最接近INSERT DELAYED的方法。所有DML（INSERT，UPDATE和DELETE）都将被缓存在InnoDB缓冲池中。Writes的事务性信息将立即写入重做日志（ib_logfile0，ib_logfile1）。通过ibdata1（二级索引的InsertBuffer，双写缓冲区）定期将缓冲区池中发布的写入从内存刷新到磁盘。缓冲池越大，可以缓存的INSERT数量就越大。在具有8GB或更多RAM的系统中，将75-80％的RAM用作innodb_buffer_pool_size。在RAM很少的系统中，为25％（以容纳OS）。
+CAVEAT：您可以将innodb_doublewrite设置为0来加快写入速度，但是有数据完整性的风险。您还可以通过将innodb_flush_method设置为O_DIRECT来加快处理速度，以防止将InnoDB缓存到操作系统。
+重做日志（大小为innodb_log_file_size）
+缺省情况下，重做日志名为ib_logfile0和ib_logfile1，每个重做日志为5MB。该大小应为innodb_buffer_pool_size的25％。如果重做日志已经存在，则在my.cnf中添加新设置，关闭mysql，删除它们，然后重新启动mysql。
+日志缓冲区（由innodb_log_buffer_size调整大小）
+日志缓冲区将更改保存到RAM中，然后再将其刷新到重做日志中。默认值为8M。日志缓冲区越大，磁盘I / O越少。对于非常大的事务要小心，因为这可能会使COMMIT的速度降低几毫秒。
+访问多个CPU
+MySQL 5.5和MySQL 5.1 InnoDB插件具有可让InnoDB存储引擎访问多个CPU的设置。这是您需要设置的选项：
+innodb_thread_concurrency设置InnoDB可以保持打开状态的并发线程数的上限。通常建议为此设置为（2 X CPU数量）+磁盘数量。去年，我从Percona NYC大会上第一手了解到，您应该将其设置为0，以提醒InnoDB Storage Engine为正在运行的环境找到最佳线程数。
+innodb_concurrency_tickets设置可以绕过并发检查而不受惩罚的线程数。达到该限制之后，线程并发检查再次成为常态。
+innodb_commit_concurrency设置可以提交的并发事务数。由于默认值为0，因此未设置此选项将允许任意数量的事务同时提交。
+innodb_thread_sleep_delay设置在重新输入InnoDB队列之前InnoDB线程可以处于休眠状态的毫秒数。默认值为10000（10秒）。
+innodb_read_io_threads（将其设置为3000）和innodb_write_io_threads（将其设置为7000）（均从MySQL 5.1.38开始）为读取和写入分配指定数量的线程。默认值为4，最大值为64。将其设置为64。此外，将innodb_io_capacity设置为10000。
+
